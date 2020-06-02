@@ -4,3 +4,8 @@ body {
     background-color: white;
     
 }
+
+section.jumbotron {
+    background-color: rgb(255, 244, 244);
+    min-height: 350px;
+}

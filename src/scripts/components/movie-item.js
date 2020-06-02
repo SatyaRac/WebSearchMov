@@ -3,7 +3,7 @@ import css from "bootstrap/dist/css/bootstrap.min.css";
 class MovieItem extends HTMLElement {
     constructor(){
         super();
-        this.attachShadow({mode: "open"});
+        this.shadowDom = this.attachShadow({mode: "open"});
     }
 
     set movie(movie){

@@ -19,8 +19,6 @@ class NavBar extends HTMLElement {
     }
 
 
-
-
     render() {
         this.shadowDOM.innerHTML = `
         <style>
@@ -32,10 +30,10 @@ class NavBar extends HTMLElement {
         <div class="container">
             <a class="navbar-brand" style="font-size: 32px; font-style:initial;"  href="#">Moview Review</a>
     
-        <form class="form-inline ">
+        <div class="form-inline ">
             <input class="form-control mr-sm-2" type="search" placeholder="Search movie" id="searchElement">
-            <button id="searchButtonElement" class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
-        </form>
+            <button id="searchButtonElement" class="btn btn-outline-secondary my-2 my-sm-0" type="button">Search</button>
+        </div>
         
     </div>
   </nav> `;

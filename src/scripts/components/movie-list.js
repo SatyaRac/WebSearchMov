@@ -1,6 +1,6 @@
  
 import css from "bootstrap/dist/css/bootstrap.min.css";
-import "./movie-item.js";
+import './movie-item.js';
 
 class MovieList extends HTMLElement {
 
@@ -39,7 +39,7 @@ class MovieList extends HTMLElement {
                 padding-bottom: 2rem;
             }
             </style>
-            <div class="row" id="results">
+            <div class="row" id="hasil">
             <div class="col-12">
             </div>
             </div>
@@ -52,6 +52,13 @@ class MovieList extends HTMLElement {
                 movieItemElement.classList.add('col-lg-3', 'col-md-4', 'col-6', 'mb-3');
                 this.shadowDOM.appendChild(movieItemElement);
             });   
+            // const hasil = this.shadowDOM.querySelector("#hasil");
+            // this.movies.forEach(movie => {
+            //     const movieItemElement = document.createElement("movie-item");
+            //     movieItemElement.movie = movie;
+            //     movieItemElement.classList.add('col-lg-3', 'col-md-4', 'col-6', 'mb-3');
+            //     hasil.appendChild(movieItemElement);
+            // });
         }
 }
     
