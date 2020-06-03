@@ -26,8 +26,8 @@ class MovieItem extends HTMLElement {
             }
         </style>
         <div class="card">
-            <a href="#" data-toggle="modal" class="layerModal_layer" id="toModal${this._movie.id}">
-            <img src="http://image.tmdb.org/t/p/w185/${this._movie.poster_path}" class="card-img-top">
+            <a href="#" data-toggle="modal" class="layerModal_layer" data-target="#movModal${this._movie.id}">
+            <img onerror="this.onerror=null;this.src='/img/Error.jpg'"; src="http://image.tmdb.org/t/p/w185/${this._movie.poster_path}" class="card-img-top">
             <div class="card-body">
                 <h6 class="card-title">${this._movie.title}</h6>
                 <p class="card-text">${this._movie.release_date}</p>
@@ -50,18 +50,26 @@ class MovieItem extends HTMLElement {
         </div>
     </div>`;
 
-    // const options = {
-    //     'backdrop': 'true',
-    //     'keyboard' : 'true'
-    // };
+    const options = {
+        'backdrop': 'true',
+        'keyboard': 'true'
+    };
+    
     const movModal = document.querySelector("#movModal"+this._movie.id);
-    const trigg = document.querySelector("#toModal"+this._movie.id);
+    // const trigg = document.querySelector("#toModal");
+
+    // $(document).ready(function(){
+    //     $(trigg).click(function(){
+    //         $(movModal).modal({backdrop: "static"});
+    //     })
+    // });
 
     $(document).ready(function(){
-        $(trigg).click(function(){
-            $(movModal).modal({backdrop: "static"});
-        })
+        $(movModal).click(function(){
+            $(movModal).modal(options);
+        });
     });
+    
     
 
     }
