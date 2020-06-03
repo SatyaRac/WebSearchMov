@@ -8,18 +8,38 @@ module.exports = {
         filename: "bundle.js"
     },
     module: {
-        rules: [
-            /* rules buat component */
-            {
-                test: /\.css$/i,
-                exclude: /styles/,
-                use: ["to-string-loader", "css-loader"]
+        rules: [{
+                test: /\.s[ac]ss$/i,
+                use: [{
+                        loader: "style-loader"
+                    },
+                    {
+                        loader: "css-loader"
+                    },
+                    {
+                        loader: "sass-loader"
+                    }
+                ]
             },
-            /* rules buat global style */
             {
                 test: /\.css$/i,
-                include: /styles/,
-                use: ["style-loader", "css-loader"]
+                exclude: '/styles/',
+                use: [{
+                        loader: "to-string-loader",
+                    },
+                    {
+                        loader: "css-loader",
+                    }
+                ]
+            },
+            {
+                test: /\.css$/i,
+                include: '/styles/',
+                use: [{
+                    loader: "style-loader"
+                }, {
+                    loader: "css-loader"
+                }]
             }
         ]
     },

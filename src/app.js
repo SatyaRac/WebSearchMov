@@ -1,4 +1,4 @@
-import "./styles/main.css";
+import "./styles/main.scss";
 import 'bootstrap';
 import main from "./scripts/view/main.js";
 

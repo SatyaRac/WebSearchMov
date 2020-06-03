@@ -30,7 +30,7 @@ class NavBar extends HTMLElement {
         <div class="container">
             <a class="navbar-brand" style="font-size: 32px; font-style:initial;"  href="#">Moview Review</a>
     
-        <div class="form-inline ">
+        <div class="search-container form-inline ">
             <input class="form-control mr-sm-2" type="search" placeholder="Search movie" id="searchElement">
             <button id="searchButtonElement" class="btn btn-outline-secondary my-2 my-sm-0" type="button">Search</button>
         </div>
